@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Fiduciaire Stéphane Conseil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            text-align: center;
+            color: #1565c0;
+        }
+        header {
+            background-color: #1565c0;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        header img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #1565c0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background: #1565c0;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .service-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 30%;
+        }
+        footer {
+            background: #1565c0;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Fiduciaire Stéphane">
+        <h1>Fiduciaire Stéphane Conseil</h1>
+      <!-- TEST FLASK : Cette ligne doit apparaître, sinon c'est un problème de cache -->
+
+    </header>
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <p>Laissez-nous vos coordonnées, nous vous contacterons dès que possible.</p>
+        <form action="#" method="post">
+            <input type="text" name="nom" placeholder="Nom" required>
+            <input type="text" name="prenom" placeholder="Prénom" required>
+            <input type="text" name="adresse" placeholder="Adresse" required>
+            <input type="tel" name="telephone" placeholder="Numéro de téléphone" required>
+            <textarea name="demande" placeholder="Expliquez votre besoin (Conseil financier, comptabilité générale, déclarations fiscales...)" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <div class="services">
+        <div class="service-box">
+            <h3>Comptabilité Générale</h3>
+            <p>Tenue des comptes, bilan et comptes de résultats.</p>
+        </div>
+        <div class="service-box">
+            <h3>Déclarations Fiscales</h3>
+            <p>Optimisation fiscale et déclarations pour particuliers et entreprises.</p>
+        </div>
+        <div class="service-box">
+            <h3>Conseil Financier</h3>
+            <p>Planification financière et accompagnement stratégique.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Fiduciaire Stéphane Conseil. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Site_Steph/
+│── app.py
+│── Stéph-bureau.jpg
+│── templates/
+│   ├── index.html
+│   ├── contact.html
